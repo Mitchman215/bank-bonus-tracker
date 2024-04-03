@@ -1,86 +1,86 @@
 [
   {
     "bank": "Citizens Bank",
-    "account-type": "checking",
+    "accountType": "checking",
     "bonus": 400,
-    "requirements-description": "$500 direct deposit, 50 debit card transactions"
+    "requirements": "$500 direct deposit, 50 debit card transactions"
   },
   {
     "bank": "Wells Fargo",
-    "account-type": "checking",
+    "accountType": "checking",
     "bonus": 300,
-    "requirements-description": "$1,000 direct deposit"
+    "requirements": "$1,000 direct deposit"
   },
   {
     "bank": "Discover",
-    "account-type": "saving",
+    "accountType": "saving",
     "bonus": 150,
-    "requirements-description": "Deposit $15,000 into new savings account"
+    "requirements": "Deposit $15,000 into new savings account"
   },
   {
     "bank": "Citibank",
-    "account-type": "checking",
+    "accountType": "checking",
     "bonus": 300,
-    "requirements-description": "Direct deposit $1,500 (using at least 2 direct deposits) within 90 days of accont opening"
+    "requirements": "Direct deposit $1,500 (using at least 2 direct deposits) within 90 days of accont opening"
   },
   {
     "bank": "Webull",
-    "account-type": "brokerage",
+    "accountType": "brokerage",
     "bonus": 100,
-    "requirements-description": "Transfer brokerage account with at least $2,000 in assets"
+    "requirements": "Transfer brokerage account with at least $2,000 in assets"
   },
   {
     "bank": "Northwest Federal Credit Union",
-    "account-type": "checking",
+    "accountType": "checking",
     "bonus": 400,
-    "requirements-description": "Make a minimum of $500 in direct deposits or ACH deposits into the checking account each month for three months."
+    "requirements": "Make a minimum of $500 in direct deposits or ACH deposits into the checking account each month for three months."
   },
   {
     "bank": "BMO Haris",
-    "account-type": "checking",
+    "accountType": "checking",
     "bonus": 300,
-    "requirements-description": "Direct deposit of $4000 within 90 days"
+    "requirements": "Direct deposit of $4000 within 90 days"
   },
   {
     "bank": "PNC",
-    "account-type": "checking",
+    "accountType": "checking",
     "bonus": 200,
-    "requirements-description": "$2,000 direct deposit"
+    "requirements": "$2,000 direct deposit"
   },
   {
     "bank": "Ally",
-    "account-type": "checking",
+    "accountType": "checking",
     "bonus": 200,
-    "requirements-description": "Use code GET200 when opening checking account. Direct deposit at least $1,500 within 90 days"
+    "requirements": "Use code GET200 when opening checking account. Direct deposit at least $1,500 within 90 days"
   },
   {
     "bank": "Capital One",
-    "account-type": "saving",
+    "accountType": "saving",
     "bonus": 300,
-    "requirements-description": "Open a new 360 Performance Savings account with promo code FALL23. Deposit $20,000+ of external funds during the 15-day Initial Funding Period after opening your account and hold those deposits for 90 additional days"
+    "requirements": "Open a new 360 Performance Savings account with promo code FALL23. Deposit $20,000+ of external funds during the 15-day Initial Funding Period after opening your account and hold those deposits for 90 additional days"
   },
   {
     "bank": "Axos Bank",
-    "account-type": "brokerage",
+    "accountType": "brokerage",
     "bonus": 250,
-    "requirements-description": "Fund account with $2,000, make a minimum of 2 trades of at least $25, maintain the $2,000 balance for 90 days"
+    "requirements": "Fund account with $2,000, make a minimum of 2 trades of at least $25, maintain the $2,000 balance for 90 days"
   },
   {
     "bank": "Tradestation",
-    "account-type": "brokerage",
+    "accountType": "brokerage",
     "bonus": 150,
-    "requirements-description": "Fund with $500 or more. Maintain that balance for 3 months at least, will receive bonus in 2 $75 deposits"
+    "requirements": "Fund with $500 or more. Maintain that balance for 3 months at least, will receive bonus in 2 $75 deposits"
   },
   {
     "bank": "Chase",
-    "account-type": "checking",
+    "accountType": "checking",
     "bonus": 200,
-    "requirements-description": "Direct deposit any amount"
+    "requirements": "Direct deposit any amount"
   },
   {
     "bank": "Washington Trust",
-    "account-type": "checking",
+    "accountType": "checking",
     "bonus": 400,
-    "requirements-description": "Any 2 direct deposits"
+    "requirements": "Any 2 direct deposits"
   }
 ]
