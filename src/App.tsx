@@ -1,21 +1,19 @@
-import './App.css'
+import { Container, Typography } from '@mui/material'
 import data from './assets/data.json'
-import OfferCard from './components/OfferCard'
+import AvailableOffers from './components/AvailableOffers'
+import { useState } from 'react'
 
 function App() {
 
+  // TODO: state for available and saved offers
+  useState(data)
+  
   return (
-    <>
-      <h1>Bank Bonus Tracker</h1>
-      <section>
-        <h2>Available Offers</h2>
-        <ul className='all-offers'>
-          {data.map((offer) => 
-            <OfferCard offer={offer} />
-          )}
-        </ul>
-      </section>
-    </>
+    <Container>
+      <Typography variant='h1' textAlign="center">Bank Bonus Tracker</Typography>
+      <AvailableOffers />
+
+    </Container>
   )
 }
 
