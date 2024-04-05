@@ -6,8 +6,6 @@ import SavedOffers from './components/SavedOffers'
 import { Offer } from './models'
 
 function App() {
-
-  // TODO: state for available and saved offers
   const [savedOffers, updateSavedOffers] = useState<Offer[]>([])
   function RemoveOffer(offer: Offer) {
     console.log({savedOffers})

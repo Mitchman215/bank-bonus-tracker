@@ -13,9 +13,9 @@
   },
   {
     "bank": "Discover",
-    "accountType": "saving",
+    "accountType": "savings",
     "bonus": 150,
-    "requirements": "Deposit $15,000 into new savings account"
+    "requirements": "Deposit $15,000 into new savingss account"
   },
   {
     "bank": "Citibank",
@@ -55,9 +55,9 @@
   },
   {
     "bank": "Capital One",
-    "accountType": "saving",
+    "accountType": "savings",
     "bonus": 300,
-    "requirements": "Open a new 360 Performance Savings account with promo code FALL23. Deposit $20,000+ of external funds during the 15-day Initial Funding Period after opening your account and hold those deposits for 90 additional days"
+    "requirements": "Open a new 360 Performance savingss account with promo code FALL23. Deposit $20,000+ of external funds during the 15-day Initial Funding Period after opening your account and hold those deposits for 90 additional days"
   },
   {
     "bank": "Axos Bank",

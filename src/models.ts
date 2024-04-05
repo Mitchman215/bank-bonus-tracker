@@ -4,3 +4,5 @@ export interface Offer {
   bonus: number;
   requirements: string;
 }
+
+export const AllAccountTypes = ['checking', 'savings', 'brokerage'];
