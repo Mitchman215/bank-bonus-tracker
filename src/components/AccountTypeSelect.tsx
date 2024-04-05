@@ -39,7 +39,7 @@ export default function AccountTypeSelect({selectedTypes, setSelectedTypes}: Acc
         input={<OutlinedInput label="Account Types" />}
         renderValue={(selected: string[]) => selected.join(', ')}
         MenuProps={MenuProps}
-        sx={{width: 250}}
+        sx={{width: "50%"}}
       >
         {AllAccountTypes.map((name) => (
           <MenuItem key={name} value={name}>
