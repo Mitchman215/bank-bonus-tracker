@@ -1,13 +1,13 @@
-import { Avatar, Card, CardContent, CardHeader, IconButton, Typography } from '@mui/material'
-import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
+import { Avatar, Card, CardContent, CardHeader, Typography } from '@mui/material'
+
 import { Offer } from '../models';
 
 interface OfferCardProps {
   offer: Offer,
-  action: (offer: Offer) => void
+  action: JSX.Element & React.ReactNode
 }
 
-export default function OfferCard({offer}: OfferCardProps) {
+export default function OfferCard({offer, action}: OfferCardProps) {
   const {bank, accountType, bonus, requirements} = offer
   const title = `$${bonus} from ${bank}`
   const subtitle = `${accountType} account`
@@ -19,11 +19,7 @@ export default function OfferCard({offer}: OfferCardProps) {
             R
           </Avatar>
         }
-        action={
-          <IconButton aria-label="add button" color='primary' size='large'>
-            <AddCircleOutlineIcon fontSize="inherit" />
-          </IconButton>
-        }
+        action={action}
         title={title}
         titleTypographyProps={{variant:'h4' }}
         subheader={subtitle}

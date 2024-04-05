@@ -1,4 +1,5 @@
-import { Box, Typography } from '@mui/material';
+import { Box, IconButton, Typography } from '@mui/material';
+import RemoveCircleOutlineIcon from '@mui/icons-material/RemoveCircleOutline';
 import { Offer } from '../models';
 import OfferCard from './OfferCard';
 
@@ -12,8 +13,12 @@ export default function SavedOffers({offers, removeOffer} : SavedOfferProps) {
     <Box component='section'>
       <Typography variant='h2'>Saved Offers</Typography>
         <Box>
-          {offers.map((offer) => 
-            <OfferCard offer={offer} />
+          {offers.map((offer, i) => 
+            <OfferCard key={i} offer={offer} action={
+              <IconButton aria-label="add button" color='error' size='large' onClick={() => removeOffer(offer)}>
+                <RemoveCircleOutlineIcon fontSize="inherit" />
+              </IconButton>
+            } />
           )}
         </Box>
     </Box>

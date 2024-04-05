@@ -1,4 +1,4 @@
-import { Container, Typography } from '@mui/material'
+import { Box, Container, Typography } from '@mui/material'
 import data from './assets/data.json'
 import AvailableOffers from './components/AvailableOffers'
 import { useState } from 'react'
@@ -10,18 +10,23 @@ function App() {
   // TODO: state for available and saved offers
   const [savedOffers, updateSavedOffers] = useState<Offer[]>([])
   function RemoveOffer(offer: Offer) {
+    console.log({savedOffers})
     updateSavedOffers([...savedOffers.filter(o => o != offer)])
   }
   function AddOffer(offer: Offer) {
+    console.log({savedOffers})
     updateSavedOffers([...savedOffers, offer])
   }
-  const availableOffers = data.filter(o => savedOffers.includes(o))
+  const availableOffers = data.filter(o => !savedOffers.includes(o))
 
   return (
     <Container>
       <Typography variant='h1' textAlign="center">Bank Bonus Tracker</Typography>
-      <AvailableOffers />
-      <SavedOffers offers={savedOffers} removeOffer={RemoveOffer}/>
+      <Typography fontSize="2rem">Did you know you can earn money just by opening up bank accounts? That's right! Check out these opening bonus offers...</Typography>
+      <Box sx={{display: "flex", gap: "2rem", my: "2rem"}}>
+        <AvailableOffers offers={availableOffers} saveOffer={AddOffer} />
+        <SavedOffers offers={savedOffers} removeOffer={RemoveOffer}/>
+      </Box>
     </Container>
   )
 }
