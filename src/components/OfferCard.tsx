@@ -1,15 +1,10 @@
 import { Avatar, Card, CardContent, CardHeader, IconButton, Typography } from '@mui/material'
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
-
-interface Offer {
-  "bank": string,
-  "accountType": string,
-  "bonus": number,
-  "requirements": string
-}
+import { Offer } from '../models';
 
 interface OfferCardProps {
-  "offer": Offer
+  offer: Offer,
+  action: (offer: Offer) => void
 }
 
 export default function OfferCard({offer}: OfferCardProps) {

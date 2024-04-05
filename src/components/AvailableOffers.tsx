@@ -1,13 +1,18 @@
 import { Box, Typography } from '@mui/material'
-import data from '../assets/data.json'
 import OfferCard from './OfferCard'
+import { Offer } from '../models'
 
-export default function AvailableOffers() {
+interface AvailableOffersProps {
+  offers: Offer[]
+  saveOffer: (offer: Offer) => void
+}
+
+export default function AvailableOffers({offers, saveOffer}: AvailableOffersProps) {
   return (
     <Box component="section">
         <Typography variant='h2'>Available Offers</Typography>
         <Box>
-          {data.map((offer) => 
+          {offers.map((offer) => 
             <OfferCard offer={offer} />
           )}
         </Box>
