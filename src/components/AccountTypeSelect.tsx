@@ -1,5 +1,5 @@
 import { SelectChangeEvent, Select, OutlinedInput, MenuItem, Checkbox, ListItemText, InputLabel } from '@mui/material';
-import { AllAccountTypes } from '../models';
+import { AccountType, AccountTypeString, AllAccountTypes } from '../models';
 
 const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;
@@ -13,19 +13,19 @@ const MenuProps = {
 };
 
 interface AccountTypeSelectProps {
-  selectedTypes: string[]
-  setSelectedTypes: React.Dispatch<React.SetStateAction<string[]>>
+  selectedTypes: AccountType[]
+  setSelectedTypes: React.Dispatch<React.SetStateAction<AccountType[]>>
 }
 
 export default function AccountTypeSelect({selectedTypes, setSelectedTypes}: AccountTypeSelectProps) {
   const handleChange = (event: SelectChangeEvent<typeof selectedTypes>) => {
-    const {
-      target: { value },
-    } = event;
-    setSelectedTypes(
-      // On autofill we get a stringified value.
-      typeof value === 'string' ? value.split(',') : value,
-    );
+    const rawVal = event.target.value;
+    if (typeof rawVal === 'string') {
+      const selected = rawVal.split(',').map(s => AccountType[s as AccountTypeString])
+      setSelectedTypes(selected);
+    } else {
+      setSelectedTypes(rawVal)
+    }
   };
 
   return (
@@ -37,14 +37,13 @@ export default function AccountTypeSelect({selectedTypes, setSelectedTypes}: Acc
         value={selectedTypes}
         onChange={handleChange}
         input={<OutlinedInput label="Account Types" />}
-        renderValue={(selected: string[]) => selected.join(', ')}
+        renderValue={selected => selected.map(s => AccountType[s]).join(', ')}
         MenuProps={MenuProps}
-        sx={{width: "50%"}}
       >
-        {AllAccountTypes.map((name) => (
-          <MenuItem key={name} value={name}>
-            <Checkbox checked={selectedTypes.indexOf(name) > -1} />
-            <ListItemText primary={name} />
+        {AllAccountTypes.map((type) => (
+          <MenuItem key={type} value={type}>
+            <Checkbox checked={selectedTypes.indexOf(type) > -1} />
+            <ListItemText primary={AccountType[type]} />
           </MenuItem>
         ))}
       </Select>

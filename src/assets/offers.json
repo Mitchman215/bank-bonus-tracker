@@ -1,0 +1,100 @@
+[
+  {
+    "bank": "Citizens Bank",
+    "accountType": "Checking",
+    "bonus": 400,
+    "requirements": "$500 direct deposit, 50 debit card transactions",
+    "link": "https://www.citizensbank.com/promo/checking/special-offer-2024-a2.aspx"
+  },
+  {
+    "bank": "Wells Fargo",
+    "accountType": "Checking",
+    "bonus": 300,
+    "requirements": "$1,000 direct deposit",
+    "link": "https://accountoffers.wellsfargo.com/welcomebonus/"
+  },
+  {
+    "bank": "Discover",
+    "accountType": "Savings",
+    "bonus": 150,
+    "requirements": "Deposit $15,000 into new savingss account",
+    "link": "https://www.discover.com/online-banking/savings-lng-04/?TPR=026"
+  },
+  {
+    "bank": "Citibank",
+    "accountType": "Checking",
+    "bonus": 300,
+    "requirements": "Direct deposit $1,500 (using at least 2 direct deposits) within 90 days of accont opening",
+    "link": "https://banking.citi.com/cbol/OM/checking/enhanced-direct-deposit-offer/default.htm"
+  },
+  {
+    "bank": "Webull",
+    "accountType": "Brokerage",
+    "bonus": 100,
+    "requirements": "Transfer brokerage account with at least $2,000 in assets",
+    "link": "https://www.webull.com/"
+  },
+  {
+    "bank": "Northwest Federal Credit Union",
+    "accountType": "Checking",
+    "bonus": 400,
+    "requirements": "Make a minimum of $500 in direct deposits or ACH deposits into the checking account each month for three months.",
+    "link": "https://www.nwfcu.org/"
+  },
+  {
+    "bank": "BMO Haris",
+    "accountType": "Checking",
+    "bonus": 300,
+    "requirements": "Direct deposit of $4000 within 90 days",
+    "link": "https://www.bmo.com/en-us/main/personal/checking-accounts/digital-offer/"
+  },
+  {
+    "bank": "PNC",
+    "accountType": "Checking",
+    "bonus": 200,
+    "requirements": "$2,000 direct deposit",
+    "link": "https://www.pnc.com/en/personal-banking/banking/checking/campaigns/checking-offer-for-PNC-customers.html#"
+  },
+  {
+    "bank": "Ally",
+    "accountType": "Checking",
+    "bonus": 200,
+    "requirements": "Use code GET200 when opening checking account. Direct deposit at least $1,500 within 90 days",
+    "link": "https://www.ally.com/go/bank/checking-bonus-next-steps/"
+  },
+  {
+    "bank": "Capital One",
+    "accountType": "Savings",
+    "bonus": 300,
+    "requirements": "Open a new 360 Performance savingss account with promo code FALL23. Deposit $20,000+ of external funds during the 15-day Initial Funding Period after opening your account and hold those deposits for 90 additional days",
+    "link": "https://www.capitalone.com/"
+  },
+  {
+    "bank": "Axos Bank",
+    "accountType": "Brokerage",
+    "bonus": 250,
+    "requirements": "Fund account with $2,000, make a minimum of 2 trades of at least $25, maintain the $2,000 balance for 90 days",
+    "link": "https://www.axosbank.com/ax-rewards-checking"
+  },
+  {
+    "bank": "Tradestation",
+    "accountType": "Brokerage",
+    "bonus": 150,
+    "requirements": "Fund with $500 or more. Maintain that balance for 3 months at least, will receive bonus in 2 $75 deposits",
+    "link": "https://www.tradestation.com/promo/150offer-uw/"
+  },
+  {
+    "bank": "Chase",
+    "accountType": "Checking",
+    "bonus": 200,
+    "requirements": "Direct deposit any amount",
+    "link": "https://account.chase.com/consumer/banking/seo"
+  },
+  {
+    "bank": "Washington Trust",
+    "accountType": "Checking",
+    "bonus": 400,
+    "requirements": "Any 2 direct deposits",
+    "link": "https://www.washtrust.com/free-checking"
+  }
+]

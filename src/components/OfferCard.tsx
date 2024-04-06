@@ -1,6 +1,6 @@
-import { Avatar, Card, CardContent, CardHeader, Typography } from '@mui/material'
+import { Avatar, Card, CardContent, CardHeader, Link, Typography } from '@mui/material'
 
-import { Offer } from '../models';
+import { AccountType, Offer } from '../models';
 
 interface OfferCardProps {
   offer: Offer,
@@ -10,14 +10,13 @@ interface OfferCardProps {
 export default function OfferCard({offer, action}: OfferCardProps) {
   const {bank, accountType, bonus, requirements} = offer
   const title = `$${bonus} from ${bank}`
-  const subtitle = `${accountType} account`
+  const subtitle = `${AccountType[accountType]} account`
+
 
   return (
     <Card sx={{ maxWidth: 550, textAlign: "start", my: 2 }}>
       <CardHeader avatar={
-          <Avatar aria-label="recipe">
-            R
-          </Avatar>
+          <Avatar alt={`${bank}'s logo`} src={offer.image.toString()} />
         }
         action={action}
         title={title}
@@ -28,6 +27,7 @@ export default function OfferCard({offer, action}: OfferCardProps) {
       <CardContent>
         <Typography variant="h6" component="p">Requirements:</Typography>
         <Typography paragraph>{requirements}</Typography>
+        <Link href={offer.link.toString()}>Go to offer</Link>
       </CardContent>
     </Card>
   )

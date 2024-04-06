@@ -19,7 +19,7 @@ interface SortBySelectProps {
 export default function SortBySelect({sortBy, setSortBy}: SortBySelectProps) {
   return (
     <>
-      <InputLabel id="sort-by-selector-label">Account Types</InputLabel>
+      <InputLabel id="sort-by-selector-label">Sort By</InputLabel>
       <Select 
       labelId='sort-by-selector-label'
       value={sortBy}

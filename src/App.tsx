@@ -1,5 +1,5 @@
 import { Box, Container, Typography } from '@mui/material'
-import data from './assets/data.json'
+import {GetAllOffers} from './data'
 import AvailableOffers from './components/AvailableOffers'
 import { useState } from 'react'
 import SavedOffers from './components/SavedOffers'
@@ -15,7 +15,14 @@ function App() {
     console.log({savedOffers})
     updateSavedOffers([...savedOffers, offer])
   }
-  const availableOffers = data.filter(o => !savedOffers.includes(o))
+  console.log({savedOffers})
+  const availableOffers = GetAllOffers().filter(o => {
+    console.log("includes", o.bank, savedOffers.some(saved => saved.id === o.id))
+    return !savedOffers.some(saved => saved.id === o.id)
+  })
+
+  console.log()
+  console.log(savedOffers[0], "equals", GetAllOffers()[0], savedOffers[0] === GetAllOffers()[0])
 
   return (
     <Container>
