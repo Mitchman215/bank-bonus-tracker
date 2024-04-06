@@ -16,7 +16,7 @@ export default function OfferCard({offer, action}: OfferCardProps) {
   return (
     <Card sx={{ maxWidth: 550, textAlign: "start", my: 2 }}>
       <CardHeader avatar={
-          <Avatar alt={`${bank}'s logo`} src={offer.image.toString()} />
+          <Avatar variant='square' alt={`${bank}'s logo`} src={offer.image.toString()} />
         }
         action={action}
         title={title}

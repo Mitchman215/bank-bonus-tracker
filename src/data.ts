@@ -1,20 +1,31 @@
 import offers from './assets/offers.json';
 import { AccountType, AccountTypeString, Offer } from './models';
 
+const cachedAllOffers: Offer[] = [];
+
 export function GetAllOffers(): Offer[] {
+  if (cachedAllOffers.length !== 0) {
+    return cachedAllOffers;
+  }
+
   let id = 0;
-  return offers.map((o) => {
+  for (let i = 0; i < offers.length; i++) {
+    const o = offers[i];
     const accountType = o.accountType as AccountTypeString;
     const link = new URL(o.link);
-    const image = new URL('/favicon.ico', link.origin);
-    return {
+
+    cachedAllOffers.push({
       id: id++,
       bank: o.bank,
       accountType: AccountType[accountType],
       bonus: o.bonus,
       requirements: o.requirements,
       link: link,
-      image: image,
-    };
-  });
+      image: new URL(
+        `https://www.google.com/s2/favicons?domain_url=${link.origin}&sz=256`
+      ),
+    });
+  }
+
+  return cachedAllOffers;
 }

@@ -15,14 +15,8 @@ function App() {
     console.log({savedOffers})
     updateSavedOffers([...savedOffers, offer])
   }
-  console.log({savedOffers})
-  const availableOffers = GetAllOffers().filter(o => {
-    console.log("includes", o.bank, savedOffers.some(saved => saved.id === o.id))
-    return !savedOffers.some(saved => saved.id === o.id)
-  })
 
-  console.log()
-  console.log(savedOffers[0], "equals", GetAllOffers()[0], savedOffers[0] === GetAllOffers()[0])
+  const availableOffers = GetAllOffers().filter(o => !savedOffers.some(saved => saved.id === o.id))
 
   return (
     <Container>
