@@ -3,6 +3,8 @@ import { AccountType, AccountTypeString, Offer } from './models';
 
 const cachedAllOffers: Offer[] = [];
 
+export let MaxBonus = 0;
+
 export function GetAllOffers(): Offer[] {
   if (cachedAllOffers.length !== 0) {
     return cachedAllOffers;
@@ -13,6 +15,9 @@ export function GetAllOffers(): Offer[] {
     const o = offers[i];
     const accountType = o.accountType as AccountTypeString;
     const link = new URL(o.link);
+    if (o.bonus > MaxBonus) {
+      MaxBonus = o.bonus;
+    }
 
     cachedAllOffers.push({
       id: id++,
