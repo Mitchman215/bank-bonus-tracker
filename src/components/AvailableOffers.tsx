@@ -19,12 +19,20 @@ export default function AvailableOffers({
 }: AvailableOffersProps) {
   const [selectedAccountTypes, setSelectedAccountTypes] =
     useState<AccountType[]>(AllAccountTypes);
-  const [sortBy, setSortBy] = useState<string>('');
+  const [sortBy, setSortBy] = useState<string>('bank');
   const [bonusRange, setBonusRange] = useState<number[]>([0, MaxBonus]);
 
   const displayedOffers = offers
-    .filter((o) => selectedAccountTypes.includes(o.accountType))
+    .filter(
+      (o) =>
+        selectedAccountTypes.includes(o.accountType) &&
+        o.bonus >= bonusRange[0] &&
+        o.bonus <= bonusRange[1]
+    )
     .sort((a, b) => {
+      if (sortBy === 'bank') {
+        return a.bank.localeCompare(b.bank);
+      }
       if (sortBy === 'ascending bonus') {
         return a.bonus - b.bonus;
       } else {
@@ -34,7 +42,7 @@ export default function AvailableOffers({
 
   function onResetClick() {
     setSelectedAccountTypes(AllAccountTypes);
-    setSortBy('descending bonus');
+    setSortBy('bank');
     setBonusRange([0, MaxBonus]);
   }
 

@@ -22,6 +22,7 @@ export default function SortBySelect({ sortBy, setSortBy }: SortBySelectProps) {
         input={<OutlinedInput label='Sort by' />}
         onChange={(e: SelectChangeEvent) => setSortBy(e.target.value)}
       >
+        <MenuItem value='bank'>Bank name</MenuItem>
         <MenuItem value='descending bonus'>Descending bonus $</MenuItem>
         <MenuItem value='ascending bonus'>Ascending bonus $</MenuItem>
       </Select>
