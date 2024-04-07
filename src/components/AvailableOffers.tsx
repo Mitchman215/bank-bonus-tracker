@@ -49,7 +49,7 @@ export default function AvailableOffers({
   return (
     <Box component='section'>
       <Typography variant='h2'>Available Offers</Typography>
-      <Grid container spacing={2} p={1} mt={2} boxShadow={1} borderRadius={4}>
+      <Grid container spacing={2} p={2} mt={2} boxShadow={1} borderRadius={4}>
         <Grid item xs={6}>
           <AccountTypeSelect
             selectedTypes={selectedAccountTypes}

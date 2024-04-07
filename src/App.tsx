@@ -29,7 +29,7 @@ function App() {
         Did you know you can earn money just by opening up bank accounts? That's
         right! Check out these opening bonus offers...
       </Typography>
-      <Grid container gap={1}>
+      <Grid container spacing={2}>
         <Grid item xs={6}>
           <AvailableOffers offers={availableOffers} saveOffer={AddOffer} />
         </Grid>
