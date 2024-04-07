@@ -1,30 +1,30 @@
-# React + TypeScript + Vite
+# Development Assignment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## How to access
 
-Currently, two official plugins are available:
+The Bank Bonus Tracker app is deployed at <https://bank-bonus-tracker.vercel.app/>.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The app's source code is available at the following repository: <https://github.com/Mitchman215/bank-bonus-tracker>.
 
-## Expanding the ESLint configuration
+A project report is available here: <https://mitchman215.github.io/cs1300-portfolio/case-studies/development/>.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## How to run
 
-- Configure the top-level `parserOptions` property like this:
+To run the app locally, first clone the app's source code.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```sh
+git clone https://github.com/Mitchman215/bank-bonus-tracker.git
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Then run the following commands from the project's root directory:
+
+```sh
+pnpm i
+pnpm run dev
+```
+
+The site should now be accessible at the displayed localhost address.
+
+## Known bugs
+
+None!
