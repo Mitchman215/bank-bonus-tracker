@@ -49,20 +49,20 @@ export default function AvailableOffers({
   return (
     <Box component='section'>
       <Typography variant='h2'>Available Offers</Typography>
-      <Grid container spacing={2} p={2} mt={2} boxShadow={1} borderRadius={4}>
+      <Grid container gap={2} p={2} mt={2} boxShadow={1} borderRadius={4}>
         <Grid item xs={6}>
           <AccountTypeSelect
             selectedTypes={selectedAccountTypes}
             setSelectedTypes={setSelectedAccountTypes}
           />
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={5}>
           <SortBySelect sortBy={sortBy} setSortBy={setSortBy} />
         </Grid>
         <Grid item xs={6}>
           <BonusSlider bonusRange={bonusRange} setBonusRange={setBonusRange} />
         </Grid>
-        <Grid item xs={6} textAlign='center'>
+        <Grid item xs={5} textAlign='center'>
           <Button variant='contained' onClick={onResetClick}>
             Reset
           </Button>
